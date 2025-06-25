@@ -5,30 +5,30 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 
-const Index = () => {
+const IndexEn = () => {
   const services = [
     {
-      title: "Automatizace testování",
-      description: "Optimalizace testovacích procesů pomocí moderních automatizačních nástrojů",
+      title: "Test Automation",
+      description: "Optimization of testing processes using modern automation tools",
       icon: <Zap className="h-8 w-8 text-cyan-500" />
     },
     {
-      title: "Audity testování software",
-      description: "Komplexní hodnocení kvality a efektivity testovacích procesů",
+      title: "Software Testing Audits",
+      description: "Comprehensive evaluation of quality and efficiency of testing processes",
       icon: <Shield className="h-8 w-8 text-cyan-500" />
     },
     {
-      title: "Optimalizace pomocí AI",
-      description: "Využití umělé inteligence pro zlepšení způsobu testování",
+      title: "AI-powered Optimization",
+      description: "Utilizing artificial intelligence to improve testing methods",
       icon: <TrendingUp className="h-8 w-8 text-cyan-500" />
     }
   ];
 
   const whyTcrew = [
-    "Více než 25 let zkušeností",
-    "Specializace na bankovnictví a telekomunikace",
-    "Individuální přístup ke každému klientovi",
-    "Inovativní řešení s využitím AI"
+    "More than 25 years of experience",
+    "Specialization in banking and telecommunications",
+    "Individual approach to each client",
+    "Innovative solutions using AI"
   ];
 
   return (
@@ -45,20 +45,20 @@ const Index = () => {
               />
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#services" className="text-gray-600 hover:text-cyan-500 transition-colors">Naše služby</a>
-              <a href="#about" className="text-gray-600 hover:text-cyan-500 transition-colors">O nás</a>
-              <a href="#why-tcrew" className="text-gray-600 hover:text-cyan-500 transition-colors">Proč TCREW?</a>
-              <a href="#contact" className="text-gray-600 hover:text-cyan-500 transition-colors">Kontakt</a>
+              <a href="#services" className="text-gray-600 hover:text-cyan-500 transition-colors">Our Services</a>
+              <a href="#about" className="text-gray-600 hover:text-cyan-500 transition-colors">About Us</a>
+              <a href="#why-tcrew" className="text-gray-600 hover:text-cyan-500 transition-colors">Why TCREW?</a>
+              <a href="#contact" className="text-gray-600 hover:text-cyan-500 transition-colors">Contact</a>
             </div>
             <div className="flex items-center space-x-4">
               <Button variant="outline" size="sm" asChild>
-                <Link to="/en">
+                <Link to="/">
                   <Globe className="mr-2 h-4 w-4" />
-                  EN
+                  CZ
                 </Link>
               </Button>
               <Button asChild>
-                <a href="#contact">Kontaktujte nás</a>
+                <a href="#contact">Contact Us</a>
               </Button>
             </div>
           </div>
@@ -69,24 +69,24 @@ const Index = () => {
       <section className="pt-24 pb-16 bg-gradient-to-br from-cyan-50 to-blue-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4 border-cyan-500 text-cyan-700">Založeno 2014</Badge>
+            <Badge variant="outline" className="mb-4 border-cyan-500 text-cyan-700">Founded 2014</Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Profesionální testování software pro{" "}
-              <span className="text-cyan-500">bankovnictví a telekomunikace</span>
+              Professional software testing for{" "}
+              <span className="text-cyan-500">banking and telecommunications</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Více než 25 let zkušeností v oblasti testování software. Specializujeme se na komplexní služby 
-              pro bankovnictví, telekomunikace, energetiku a strojírenství.
+              More than 25 years of experience in software testing. We specialize in comprehensive services 
+              for banking, telecommunications, energy, and engineering sectors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-cyan-500 hover:bg-cyan-600">
                 <a href="#services">
-                  Naše služby
+                  Our Services
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild className="border-cyan-500 text-cyan-700 hover:bg-cyan-50">
-                <a href="#contact">Kontaktujte nás</a>
+                <a href="#contact">Contact Us</a>
               </Button>
             </div>
           </div>
@@ -97,9 +97,9 @@ const Index = () => {
       <section id="services" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Naše služby</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Poskytujeme komplexní služby v oblasti testování software s důrazem na kvalitu a inovaci
+              We provide comprehensive software testing services with emphasis on quality and innovation
             </p>
           </div>
           
@@ -118,34 +118,34 @@ const Index = () => {
           </div>
 
           <div className="bg-cyan-50 rounded-lg p-8 border border-cyan-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Kompletní portfolio služeb</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Complete Service Portfolio</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Testování reportingu do celoevropského registru investičního bankovnictví</span>
+                  <CheckCircle className="h-5 w-5 text-cyan-500 mt-0.5 flex-shrink-0" />
+                  <span>Testing reporting to European investment banking registry</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Testování reportingů nástrojů finančního trhu</span>
+                  <CheckCircle className="h-5 w-5 text-cyan-500 mt-0.5 flex-shrink-0" />
+                  <span>Testing financial market tool reporting</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Testování implementace pohledávkového systému</span>
+                  <CheckCircle className="h-5 w-5 text-cyan-500 mt-0.5 flex-shrink-0" />
+                  <span>Testing debt system implementation</span>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Integrace na třetí strany</span>
+                  <CheckCircle className="h-5 w-5 text-cyan-500 mt-0.5 flex-shrink-0" />
+                  <span>Third-party integrations</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Návrh a optimalizace procesů testování</span>
+                  <CheckCircle className="h-5 w-5 text-cyan-500 mt-0.5 flex-shrink-0" />
+                  <span>Testing process design and optimization</span>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span>Konzultace a poradenství v oblasti QA</span>
+                  <CheckCircle className="h-5 w-5 text-cyan-500 mt-0.5 flex-shrink-0" />
+                  <span>QA consulting and advisory services</span>
                 </div>
               </div>
             </div>
@@ -158,43 +158,43 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">O nás</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Us</h2>
               <p className="text-xl text-gray-600">
-                Tým zkušených profesionálů v oblasti testování software
+                Team of experienced professionals in software testing
               </p>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <Card>
+                <Card className="border-cyan-100">
                   <CardHeader className="text-center">
-                    <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Users className="h-12 w-12 text-blue-600" />
+                    <div className="w-24 h-24 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Users className="h-12 w-12 text-cyan-500" />
                     </div>
                     <CardTitle className="text-2xl">Ing. Martin Boháč</CardTitle>
-                    <CardDescription className="text-base">Zakladatel a vedoucí TCREW</CardDescription>
+                    <CardDescription className="text-base">Founder and Leader of TCREW</CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-gray-600">
-                      Více než 25 let zkušeností se systémy v oblastech telekomunikací, 
-                      bankovnictví a dalších. Zakladatel společnosti TCREW v roce 2014 
-                      s vizí vytvořit tým profesionálů v oblasti testování software.
+                      More than 25 years of experience with systems in telecommunications, 
+                      banking and other sectors. Founded TCREW in 2014 
+                      with a vision to create a team of software testing professionals.
                     </p>
                   </CardContent>
                 </Card>
               </div>
               
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-gray-900">Naše mise</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Our Mission</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Společnost TCREW byla založena s jasnou vizí - vytvořit tým profesionálů 
-                  v oblasti testování software a dodávat služby založené na více než 25 let 
-                  zkušeností se systémy v oblastech telekomunikací, bankovnictví a dalších.
+                  TCREW was founded with a clear vision - to create a team of professionals 
+                  in software testing and deliver services based on more than 25 years 
+                  of experience with systems in telecommunications, banking and other sectors.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Po více než deseti letech úspěšného působení na trhu se naše portfolio 
-                  služeb rozšířilo o klíčové oblasti včetně automatizace testování, 
-                  auditů a optimalizace pomocí AI.
+                  After more than ten years of successful market presence, our service portfolio 
+                  has expanded to include key areas such as test automation, 
+                  audits and AI-powered optimization.
                 </p>
               </div>
             </div>
@@ -206,9 +206,9 @@ const Index = () => {
       <section id="why-tcrew" className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Proč TCREW?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Why TCREW?</h2>
             <p className="text-xl text-gray-600 mb-12">
-              Naše konkurenční výhody a hodnoty, které nás odlišují na trhu
+              Our competitive advantages and values that set us apart in the market
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -221,11 +221,11 @@ const Index = () => {
             </div>
             
             <div className="mt-12 p-8 bg-cyan-50 rounded-lg border border-cyan-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Individuální přístup</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Individual Approach</h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Každý projekt je pro nás jedinečný. Věnujeme pozornost detailům a poskytujeme 
-                řešení šité na míru vašim specifickým potřebám. Naše zkušenosti z různých 
-                odvětví nám umožňují nabídnout komplexní a inovativní přístup k testování software.
+                Every project is unique for us. We pay attention to details and provide 
+                solutions tailored to your specific needs. Our experience from various 
+                industries allows us to offer comprehensive and innovative approach to software testing.
               </p>
             </div>
           </div>
@@ -237,91 +237,91 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kontakt</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact</h2>
               <p className="text-xl text-gray-600">
-                Máte otázky nebo chcete diskutovat o vašem projektu? Kontaktujte nás!
+                Have questions or want to discuss your project? Contact us!
               </p>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Kontaktní údaje</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-gray-900">E-mail</h4>
+                    <h4 className="font-semibold text-gray-900">Email</h4>
                     <p className="text-gray-600">info@tcrew.cz</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Telefon</h4>
+                    <h4 className="font-semibold text-gray-900">Phone</h4>
                     <p className="text-gray-600">+420 777 557 197</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Sídlo</h4>
+                    <h4 className="font-semibold text-gray-900">Address</h4>
                     <p className="text-gray-600">
                       U zeměpisného ústavu 683/2<br />
-                      Bubeneč, 160 00 Praha 6
+                      Bubeneč, 160 00 Prague 6
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">IČO</h4>
+                    <h4 className="font-semibold text-gray-900">Company ID</h4>
                     <p className="text-gray-600">02857537</p>
                   </div>
                 </div>
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Napište nám</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Write to Us</h3>
                 <form className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Jméno a příjmení *
+                      Full Name *
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      E-mail *
+                      Email *
                     </label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     />
                   </div>
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                      Společnost
+                      Company
                     </label>
                     <input
                       type="text"
                       id="company"
                       name="company"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Zpráva *
+                      Message *
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       rows={5}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Popište prosím váš projekt nebo požadavky..."
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Please describe your project or requirements..."
                     ></textarea>
                   </div>
-                  <Button type="submit" className="w-full">
-                    Odeslat zprávu
+                  <Button type="submit" className="w-full bg-cyan-500 hover:bg-cyan-600">
+                    Send Message
                   </Button>
                 </form>
               </div>
@@ -343,34 +343,34 @@ const Index = () => {
                 />
               </div>
               <p className="text-gray-400 mb-4">
-                Profesionální testování software pro bankovnictví, telekomunikace, 
-                energetiku a strojírenství.
+                Professional software testing for banking, telecommunications, 
+                energy and engineering sectors.
               </p>
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Kontakt</h4>
+              <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-gray-400">
                 <p>info@tcrew.cz</p>
                 <p>+420 777 557 197</p>
                 <p>U zeměpisného ústavu 683/2</p>
-                <p>Bubeneč, 160 00 Praha 6</p>
+                <p>Bubeneč, 160 00 Prague 6</p>
               </div>
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Služby</h4>
+              <h4 className="font-semibold mb-4">Services</h4>
               <div className="space-y-2 text-gray-400">
-                <p>Automatizace testování</p>
-                <p>Audity testování software</p>
-                <p>Optimalizace pomocí AI</p>
-                <p>Testování bankovních systémů</p>
+                <p>Test Automation</p>
+                <p>Software Testing Audits</p>
+                <p>AI-powered Optimization</p>
+                <p>Banking System Testing</p>
               </div>
             </div>
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 TCREW. Všechna práva vyhrazena. | IČO: 02857537</p>
+            <p>&copy; 2024 TCREW. All rights reserved. | Company ID: 02857537</p>
           </div>
         </div>
       </footer>
@@ -378,4 +378,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default IndexEn;
