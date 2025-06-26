@@ -1,8 +1,7 @@
 
-import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Globe } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -34,7 +33,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-primary/10">
+      <nav className="fixed top-0 w-full bg-gradient-to-r from-white/95 via-white/98 to-primary/5 backdrop-blur-md z-50 border-b border-primary/20 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -45,19 +44,31 @@ const Index = () => {
               />
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#services" className="text-gray-600 hover:text-primary transition-colors">Naše služby</a>
-              <a href="#about" className="text-gray-600 hover:text-primary transition-colors">O nás</a>
-              <a href="#why-tcrew" className="text-gray-600 hover:text-primary transition-colors">Proč TCREW?</a>
-              <a href="#contact" className="text-gray-600 hover:text-primary transition-colors">Kontakt</a>
+              <a href="#services" className="text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
+                Naše služby
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a href="#about" className="text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
+                O nás
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a href="#why-tcrew" className="text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
+                Proč TCREW?
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a href="#contact" className="text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
+                Kontakt
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
             </div>
             <div className="flex items-center space-x-4">
-              <Button variant="outline" size="sm" asChild className="border-primary/50 text-primary hover:bg-primary/10">
+              <Button variant="outline" size="sm" asChild className="border-primary/30 text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300 shadow-sm">
                 <Link to="/en">
-                  <Globe className="mr-2 h-4 w-4" />
+                  <Languages className="mr-2 h-4 w-4" />
                   EN
                 </Link>
               </Button>
-              <Button asChild className="bg-primary hover:bg-primary/90 text-white">
+              <Button asChild className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white shadow-lg shadow-primary/25 transition-all duration-300">
                 <a href="#contact">Kontaktujte nás</a>
               </Button>
             </div>
@@ -70,7 +81,6 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent"></div>
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="outline" className="mb-4 border-primary text-primary bg-primary/5">Založeno 2014</Badge>
             <p className="text-lg text-primary font-medium mb-4 italic">Your partner for testing</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               Profesionální testování software pro{" "}
@@ -201,8 +211,8 @@ const Index = () => {
                     <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-primary/40 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Users className="h-12 w-12 text-primary" />
                     </div>
-                    <CardTitle className="text-2xl">Ing. Martin Boháč</CardTitle>
-                    <CardDescription className="text-base">Zakladatel a vedoucí TCREW</CardDescription>
+                    <CardTitle className="text-2xl">Martin Boháč</CardTitle>
+                    <CardDescription className="text-base">Zakladatel TCREW</CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-gray-600">
@@ -398,10 +408,10 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Služby</h4>
               <div className="space-y-2 text-gray-400">
-                <p>Automatizace testování</p>
-                <p>Audity testování software</p>
-                <p>Optimalizace pomocí AI</p>
-                <p>Testování bankovních systémů</p>
+                <p><a href="#services" className="hover:text-white transition-colors">Automatizace testování</a></p>
+                <p><a href="#services" className="hover:text-white transition-colors">Audity testování software</a></p>
+                <p><a href="#services" className="hover:text-white transition-colors">Optimalizace pomocí AI</a></p>
+                <p><a href="#services" className="hover:text-white transition-colors">Testování bankovních systémů</a></p>
               </div>
             </div>
           </div>
