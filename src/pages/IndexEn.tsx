@@ -1,3 +1,4 @@
+
 import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Globe, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,6 +30,14 @@ const IndexEn = () => {
     "Innovative solutions using AI"
   ];
 
+  const scrollingTexts = [
+    "AI-powered Testing",
+    "Banking Solutions",
+    "Telecom Innovation", 
+    "Quality Assurance",
+    "Test Automation"
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -39,7 +48,7 @@ const IndexEn = () => {
               <img 
                 src="/lovable-uploads/af19479d-d08b-4611-a40e-b2b600f1830c.png" 
                 alt="TCREW Logo" 
-                className="h-10 w-auto"
+                className="h-12 w-auto"
               />
             </div>
             <div className="hidden md:flex space-x-8">
@@ -75,8 +84,24 @@ const IndexEn = () => {
         </div>
       </nav>
 
+      {/* Scrolling Text Animation */}
+      <div className="fixed top-20 left-0 w-full overflow-hidden bg-gradient-to-r from-primary/10 to-transparent z-40 py-2">
+        <div className="animate-[scroll_20s_linear_infinite] whitespace-nowrap">
+          {scrollingTexts.map((text, index) => (
+            <span key={index} className="inline-block mx-8 text-primary font-semibold text-sm">
+              {text}
+            </span>
+          ))}
+          {scrollingTexts.map((text, index) => (
+            <span key={`repeat-${index}`} className="inline-block mx-8 text-primary font-semibold text-sm">
+              {text}
+            </span>
+          ))}
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-primary/5 via-primary/10 to-blue-50 relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/5 via-primary/10 to-blue-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent"></div>
         <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
@@ -102,22 +127,22 @@ const IndexEn = () => {
             </div>
           </div>
         </div>
-        <div className="absolute top-1/2 right-10 opacity-10">
+        <div className="absolute top-1/2 right-10 opacity-20">
           <img 
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&fit=crop&crop=center" 
-            alt="Data Analytics Dashboard"
-            className="w-96 h-96 object-cover rounded-full"
+            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=500&fit=crop&crop=center" 
+            alt="Advanced AI Testing Technology"
+            className="w-96 h-96 object-cover rounded-full shadow-2xl border-4 border-primary/20"
           />
         </div>
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-16 relative">
-        <div className="absolute top-0 right-0">
+        <div className="absolute top-0 right-0 opacity-15">
           <img 
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center" 
-            alt="Business Analytics"
-            className="w-64 h-40 object-cover opacity-5"
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop&crop=center" 
+            alt="AI Circuit Board Technology"
+            className="w-80 h-60 object-cover rounded-lg shadow-xl"
           />
         </div>
         <div className="container mx-auto px-4">
@@ -143,11 +168,11 @@ const IndexEn = () => {
           </div>
 
           <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-8 border border-primary/20 relative overflow-hidden">
-            <div className="absolute top-0 right-0 opacity-10">
+            <div className="absolute top-0 right-0 opacity-20">
               <img 
-                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=300&h=200&fit=crop&crop=center" 
-                alt="Artificial Intelligence"
-                className="w-48 h-32 object-cover"
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop&crop=center" 
+                alt="Software Testing Code"
+                className="w-64 h-48 object-cover rounded-lg shadow-lg"
               />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Complete Service Portfolio</h3>
@@ -187,11 +212,11 @@ const IndexEn = () => {
 
       {/* About Section */}
       <section id="about" className="py-16 bg-gradient-to-br from-gray-50 to-primary/5 relative">
-        <div className="absolute bottom-0 left-0 opacity-10">
+        <div className="absolute bottom-0 left-0 opacity-15">
           <img 
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center" 
-            alt="Financial Technology"
-            className="w-64 h-48 object-cover"
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=400&fit=crop&crop=center" 
+            alt="AI Banking Software"
+            className="w-80 h-64 object-cover rounded-lg shadow-xl"
           />
         </div>
         <div className="container mx-auto px-4">
@@ -243,11 +268,11 @@ const IndexEn = () => {
 
       {/* Why TCREW Section */}
       <section id="why-tcrew" className="py-16 relative overflow-hidden">
-        <div className="absolute top-1/2 left-0 opacity-10">
+        <div className="absolute top-1/2 left-0 opacity-15">
           <img 
-            src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=500&h=300&fit=crop&crop=center" 
-            alt="Mobile Banking App"
-            className="w-80 h-48 object-cover"
+            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop&crop=center" 
+            alt="AI Software Testing Code"
+            className="w-96 h-64 object-cover rounded-lg shadow-xl"
           />
         </div>
         <div className="container mx-auto px-4">
@@ -430,6 +455,17 @@ const IndexEn = () => {
           </div>
         </div>
       </footer>
+
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      `}</style>
     </div>
   );
 };
