@@ -1,3 +1,4 @@
+
 import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Globe, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -19,6 +20,11 @@ const IndexEn = () => {
       title: "AI-powered Optimization",
       description: "Utilizing artificial intelligence to improve testing methods",
       icon: <TrendingUp className="h-8 w-8 text-primary" />
+    },
+    {
+      title: "Testing Strategies for Integration Projects",
+      description: "Setting up testing strategies for medium and large integration projects and managing them during implementation",
+      icon: <Users className="h-8 w-8 text-primary" />
     }
   ];
 
@@ -152,7 +158,7 @@ const IndexEn = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
             {services.map((service, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 border-primary/20 hover:border-primary/40 group">
                 <CardHeader>
@@ -166,7 +172,7 @@ const IndexEn = () => {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-8 border border-primary/20 relative overflow-hidden">
+          <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-8 border border-primary/20 relative overflow-hidden mb-8">
             <div className="absolute top-0 right-0 opacity-20">
               <img 
                 src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop&crop=center" 
@@ -205,6 +211,15 @@ const IndexEn = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-blue-50 to-primary/5 rounded-xl p-8 border border-blue-200/50">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Long-term Partnership</h3>
+            <p className="text-lg text-gray-600 leading-relaxed text-center max-w-3xl mx-auto">
+              We love to establish long-term partnerships, which from our experience lead to client satisfaction. 
+              Our continuous involvement in your projects allows us to better understand your needs 
+              and provide increasingly higher quality services tailored to your specific environment.
+            </p>
           </div>
         </div>
       </section>
