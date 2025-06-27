@@ -1,5 +1,5 @@
 
-import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Languages } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -33,42 +33,42 @@ const IndexEn = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-gradient-to-r from-white/95 via-white/98 to-primary/5 backdrop-blur-md z-50 border-b border-primary/20 shadow-sm">
+      <nav className="fixed top-0 w-full bg-gradient-to-r from-white/95 via-white/98 to-primary/5 backdrop-blur-md z-50 border-b border-primary/20 shadow-lg">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <img 
                 src="/lovable-uploads/af19479d-d08b-4611-a40e-b2b600f1830c.png" 
                 alt="TCREW Logo" 
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#services" className="text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
                 Our Services
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-blue-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a href="#about" className="text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
                 About Us
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-blue-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a href="#why-tcrew" className="text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
                 Why TCREW?
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-blue-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
               <a href="#contact" className="text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
                 Contact
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-blue-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </div>
             <div className="flex items-center space-x-4">
-              <Button variant="outline" size="sm" asChild className="border-primary/30 text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300 shadow-sm">
+              <Button variant="outline" size="sm" asChild className="border-primary/30 text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300 shadow-sm hover:shadow-md">
                 <Link to="/">
-                  <Languages className="mr-2 h-4 w-4" />
+                  <Globe className="mr-2 h-4 w-4" />
                   CZ
                 </Link>
               </Button>
-              <Button asChild className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white shadow-lg shadow-primary/25 transition-all duration-300">
+              <Button asChild className="bg-gradient-to-r from-primary via-blue-600 to-teal-500 hover:from-primary/90 hover:via-blue-600/90 hover:to-teal-500/90 text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/40">
                 <a href="#contact">Contact Us</a>
               </Button>
             </div>
@@ -105,8 +105,8 @@ const IndexEn = () => {
         </div>
         <div className="absolute top-1/2 right-10 opacity-10">
           <img 
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop&crop=center" 
-            alt="Technology Background"
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=400&fit=crop&crop=center" 
+            alt="Data Analytics Dashboard"
             className="w-96 h-96 object-cover rounded-full"
           />
         </div>
@@ -116,8 +116,8 @@ const IndexEn = () => {
       <section id="services" className="py-16 relative">
         <div className="absolute top-0 right-0">
           <img 
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop&crop=center" 
-            alt="Programming Code"
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center" 
+            alt="Business Analytics"
             className="w-64 h-40 object-cover opacity-5"
           />
         </div>
@@ -146,8 +146,8 @@ const IndexEn = () => {
           <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-8 border border-primary/20 relative overflow-hidden">
             <div className="absolute top-0 right-0 opacity-10">
               <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=200&fit=crop&crop=center" 
-                alt="MacBook Technology"
+                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=300&h=200&fit=crop&crop=center" 
+                alt="Artificial Intelligence"
                 className="w-48 h-32 object-cover"
               />
             </div>
@@ -190,8 +190,8 @@ const IndexEn = () => {
       <section id="about" className="py-16 bg-gradient-to-br from-gray-50 to-primary/5 relative">
         <div className="absolute bottom-0 left-0 opacity-10">
           <img 
-            src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop&crop=center" 
-            alt="Laptop Technology"
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop&crop=center" 
+            alt="Financial Technology"
             className="w-64 h-48 object-cover"
           />
         </div>
@@ -217,7 +217,7 @@ const IndexEn = () => {
                   <CardContent className="text-center">
                     <p className="text-gray-600">
                       More than 25 years of experience with systems in telecommunications, 
-                      banking and other sectors. Founded TCREW in 2014 
+                      banking and other sectors. Founded TCREW 
                       with a vision to create a team of software testing professionals.
                     </p>
                   </CardContent>
@@ -246,8 +246,8 @@ const IndexEn = () => {
       <section id="why-tcrew" className="py-16 relative overflow-hidden">
         <div className="absolute top-1/2 left-0 opacity-10">
           <img 
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop&crop=center" 
-            alt="MacBook with Code"
+            src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=500&h=300&fit=crop&crop=center" 
+            alt="Mobile Banking App"
             className="w-80 h-48 object-cover"
           />
         </div>
