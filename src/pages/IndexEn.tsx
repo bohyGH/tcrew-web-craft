@@ -1,5 +1,4 @@
-
-import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Globe } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Globe, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -393,6 +392,16 @@ const IndexEn = () => {
                 Professional software testing for banking, telecommunications, 
                 energy and engineering sectors.
               </p>
+              <div className="flex items-center space-x-4">
+                <a 
+                  href="https://www.linkedin.com/company/tcrew/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </a>
+              </div>
             </div>
             
             <div>
