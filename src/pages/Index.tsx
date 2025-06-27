@@ -1,3 +1,4 @@
+
 import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Globe, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -52,7 +53,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/af19479d-d08b-4611-a40e-b2b600f1830c.png" 
                 alt="TCREW Logo" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </div>
             <div className="hidden md:flex space-x-8">
@@ -108,47 +109,42 @@ const Index = () => {
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/5 via-primary/10 to-blue-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent"></div>
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-primary font-medium mb-4 italic">Your partner for testing</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Profesionální testování software pro{" "}
-              <span className="text-primary bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">bankovnictví a telekomunikace</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Více než 25 let zkušeností v oblasti testování software. Specializujeme se na komplexní služby 
-              pro bankovnictví, telekomunikace, energetiku a strojírenství.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25">
-                <a href="#services">
-                  Naše služby
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="border-primary text-primary hover:bg-primary/10">
-                <a href="#contact">Kontaktujte nás</a>
-              </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <p className="text-lg text-primary font-medium mb-4 italic">Your partner for testing</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                Profesionální testování software pro{" "}
+                <span className="text-primary bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">bankovnictví a telekomunikace</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Více než 25 let zkušeností v oblasti testování software. Specializujeme se na komplexní služby 
+                pro bankovnictví, telekomunikace, energetiku a strojírenství.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25">
+                  <a href="#services">
+                    Naše služby
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild className="border-primary text-primary hover:bg-primary/10">
+                  <a href="#contact">Kontaktujte nás</a>
+                </Button>
+              </div>
+            </div>
+            <div className="flex justify-center lg:justify-end">
+              <img 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=600&fit=crop&crop=center" 
+                alt="Advanced AI Testing Technology"
+                className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border-4 border-primary/20 hover:shadow-3xl transition-all duration-300 hover:scale-105"
+              />
             </div>
           </div>
-        </div>
-        <div className="absolute top-1/2 right-10 opacity-20">
-          <img 
-            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=500&fit=crop&crop=center" 
-            alt="Advanced AI Testing Technology"
-            className="w-96 h-96 object-cover rounded-full shadow-2xl border-4 border-primary/20"
-          />
         </div>
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-16 relative">
-        <div className="absolute top-0 right-0 opacity-15">
-          <img 
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop&crop=center" 
-            alt="AI Circuit Board Technology"
-            className="w-80 h-60 object-cover rounded-lg shadow-xl"
-          />
-        </div>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Naše služby</h2>
@@ -159,7 +155,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-primary/20 hover:border-primary/40 group">
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-primary/20 hover:border-primary/40 group hover:scale-105">
                 <CardHeader>
                   <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                   <CardTitle className="text-xl text-gray-900">{service.title}</CardTitle>
@@ -171,16 +167,9 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-8 border border-primary/20 relative overflow-hidden mb-8">
-            <div className="absolute top-0 right-0 opacity-20">
-              <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop&crop=center" 
-                alt="Software Testing Code"
-                className="w-64 h-48 object-cover rounded-lg shadow-lg"
-              />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Kompletní portfolio služeb</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8">
+            <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-8 border border-primary/20">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Kompletní portfolio služeb</h3>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
@@ -194,8 +183,6 @@ const Index = () => {
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>Testování implementace pohledávkového systému</span>
                 </div>
-              </div>
-              <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>Integrace na třetí strany</span>
@@ -209,6 +196,14 @@ const Index = () => {
                   <span>Konzultace a poradenství v oblasti QA</span>
                 </div>
               </div>
+            </div>
+            
+            <div className="flex justify-center items-center">
+              <img 
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=400&fit=crop&crop=center" 
+                alt="Software Testing Code"
+                className="w-full max-w-md h-80 object-cover rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              />
             </div>
           </div>
 
@@ -225,13 +220,6 @@ const Index = () => {
 
       {/* About Section */}
       <section id="about" className="py-16 bg-gradient-to-br from-gray-50 to-primary/5 relative">
-        <div className="absolute bottom-0 left-0 opacity-15">
-          <img 
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=400&fit=crop&crop=center" 
-            alt="AI Banking Software"
-            className="w-80 h-64 object-cover rounded-lg shadow-xl"
-          />
-        </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -273,6 +261,13 @@ const Index = () => {
                   služeb rozšířilo o klíčové oblasti včetně automatizace testování, 
                   auditů a optimalizace pomocí AI.
                 </p>
+                <div className="flex justify-center lg:justify-start mt-8">
+                  <img 
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop&crop=center" 
+                    alt="AI Banking Software"
+                    className="w-80 h-60 object-cover rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -281,35 +276,45 @@ const Index = () => {
 
       {/* Why TCREW Section */}
       <section id="why-tcrew" className="py-16 relative overflow-hidden">
-        <div className="absolute top-1/2 left-0 opacity-15">
-          <img 
-            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop&crop=center" 
-            alt="AI Software Testing Code"
-            className="w-96 h-64 object-cover rounded-lg shadow-xl"
-          />
-        </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Proč TCREW?</h2>
             <p className="text-xl text-gray-600 mb-12">
-              Naše konkurenční výhody a hodnoty, které nás odlišují na trhu
+              Objevte, proč jsou naše služby tou správnou volbou pro váš úspěch v digitální transformaci
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {whyTcrew.map((item, index) => (
-                <div key={index} className="flex items-center space-x-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-primary/10 hover:border-primary/30">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
-                  <span className="text-lg font-medium text-gray-800">{item}</span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+                  {whyTcrew.map((item, index) => (
+                    <div key={index} className="flex items-center space-x-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/10 hover:border-primary/30 hover:scale-105">
+                      <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
+                      <span className="text-lg font-medium text-gray-800">{item}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              
+              <div className="flex justify-center items-center">
+                <img 
+                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=400&fit=crop&crop=center" 
+                  alt="AI Software Testing Code"
+                  className="w-full max-w-md h-80 object-cover rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                />
+              </div>
             </div>
             
-            <div className="mt-12 p-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border border-primary/20">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Individuální přístup</h3>
+            <div className="p-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border border-primary/20">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Váš úspěch je náš cíl</h3>
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                Každý projekt vnímáme jako příležitost prokázat naši expertizu a vytvořit 
+                dlouhodobé partnerství založené na důvěře a výsledcích.
+              </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Každý projekt je pro nás jedinečný. Věnujeme pozornost detailům a poskytujeme 
-                řešení šité na míru vašim specifickým potřebám. Naše zkušenosti z různých 
-                odvětví nám umožňují nabídnout komplexní a inovativní přístup k testování software.
+                Naše bohaté zkušenosti z různých odvětví nám umožňují rychle se orientovat 
+                ve vašem specifickém prostředí a nabídnout řešení, která skutečně fungují. 
+                <span className="font-semibold text-primary"> Investujeme do nejnovějších technologií</span>, 
+                abychom vám mohli nabídnout konkurenční výhodu v rychle se měnícím světě IT.
               </p>
             </div>
           </div>

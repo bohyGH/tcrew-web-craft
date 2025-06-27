@@ -53,7 +53,7 @@ const IndexEn = () => {
               <img 
                 src="/lovable-uploads/af19479d-d08b-4611-a40e-b2b600f1830c.png" 
                 alt="TCREW Logo" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </div>
             <div className="hidden md:flex space-x-8">
@@ -109,47 +109,42 @@ const IndexEn = () => {
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/5 via-primary/10 to-blue-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent"></div>
         <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-primary font-medium mb-4 italic">Your partner for testing</p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Professional software testing for{" "}
-              <span className="text-primary bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">banking and telecommunications</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              More than 25 years of experience in software testing. We specialize in comprehensive services 
-              for banking, telecommunications, energy, and engineering sectors.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25">
-                <a href="#services">
-                  Our Services
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="border-primary text-primary hover:bg-primary/10">
-                <a href="#contact">Contact Us</a>
-              </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <p className="text-lg text-primary font-medium mb-4 italic">Your partner for testing</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                Professional software testing for{" "}
+                <span className="text-primary bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">banking and telecommunications</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                More than 25 years of experience in software testing. We specialize in comprehensive services 
+                for banking, telecommunications, energy, and engineering sectors.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25">
+                  <a href="#services">
+                    Our Services
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild className="border-primary text-primary hover:bg-primary/10">
+                  <a href="#contact">Contact Us</a>
+                </Button>
+              </div>
+            </div>
+            <div className="flex justify-center lg:justify-end">
+              <img 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=600&fit=crop&crop=center" 
+                alt="Advanced AI Testing Technology"
+                className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border-4 border-primary/20 hover:shadow-3xl transition-all duration-300 hover:scale-105"
+              />
             </div>
           </div>
-        </div>
-        <div className="absolute top-1/2 right-10 opacity-20">
-          <img 
-            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=500&fit=crop&crop=center" 
-            alt="Advanced AI Testing Technology"
-            className="w-96 h-96 object-cover rounded-full shadow-2xl border-4 border-primary/20"
-          />
         </div>
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-16 relative">
-        <div className="absolute top-0 right-0 opacity-15">
-          <img 
-            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop&crop=center" 
-            alt="AI Circuit Board Technology"
-            className="w-80 h-60 object-cover rounded-lg shadow-xl"
-          />
-        </div>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
@@ -160,7 +155,7 @@ const IndexEn = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-primary/20 hover:border-primary/40 group">
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-primary/20 hover:border-primary/40 group hover:scale-105">
                 <CardHeader>
                   <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                   <CardTitle className="text-xl text-gray-900">{service.title}</CardTitle>
@@ -172,16 +167,9 @@ const IndexEn = () => {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-8 border border-primary/20 relative overflow-hidden mb-8">
-            <div className="absolute top-0 right-0 opacity-20">
-              <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop&crop=center" 
-                alt="Software Testing Code"
-                className="w-64 h-48 object-cover rounded-lg shadow-lg"
-              />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Complete Service Portfolio</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8">
+            <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl p-8 border border-primary/20">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Complete Service Portfolio</h3>
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
@@ -195,8 +183,6 @@ const IndexEn = () => {
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>Testing debt system implementation</span>
                 </div>
-              </div>
-              <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>Third-party integrations</span>
@@ -210,6 +196,14 @@ const IndexEn = () => {
                   <span>QA consulting and advisory services</span>
                 </div>
               </div>
+            </div>
+            
+            <div className="flex justify-center items-center">
+              <img 
+                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=400&fit=crop&crop=center" 
+                alt="Software Testing Code"
+                className="w-full max-w-md h-80 object-cover rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              />
             </div>
           </div>
 
@@ -226,13 +220,6 @@ const IndexEn = () => {
 
       {/* About Section */}
       <section id="about" className="py-16 bg-gradient-to-br from-gray-50 to-primary/5 relative">
-        <div className="absolute bottom-0 left-0 opacity-15">
-          <img 
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=400&fit=crop&crop=center" 
-            alt="AI Banking Software"
-            className="w-80 h-64 object-cover rounded-lg shadow-xl"
-          />
-        </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -274,6 +261,13 @@ const IndexEn = () => {
                   has expanded to include key areas such as test automation, 
                   audits and AI-powered optimization.
                 </p>
+                <div className="flex justify-center lg:justify-start mt-8">
+                  <img 
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop&crop=center" 
+                    alt="AI Banking Software"
+                    className="w-80 h-60 object-cover rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -282,35 +276,45 @@ const IndexEn = () => {
 
       {/* Why TCREW Section */}
       <section id="why-tcrew" className="py-16 relative overflow-hidden">
-        <div className="absolute top-1/2 left-0 opacity-15">
-          <img 
-            src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop&crop=center" 
-            alt="AI Software Testing Code"
-            className="w-96 h-64 object-cover rounded-lg shadow-xl"
-          />
-        </div>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Why TCREW?</h2>
             <p className="text-xl text-gray-600 mb-12">
-              Our competitive advantages and values that set us apart in the market
+              Discover why our services are the right choice for your success in digital transformation
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {whyTcrew.map((item, index) => (
-                <div key={index} className="flex items-center space-x-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-primary/10 hover:border-primary/30">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
-                  <span className="text-lg font-medium text-gray-800">{item}</span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+                  {whyTcrew.map((item, index) => (
+                    <div key={index} className="flex items-center space-x-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/10 hover:border-primary/30 hover:scale-105">
+                      <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
+                      <span className="text-lg font-medium text-gray-800">{item}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              
+              <div className="flex justify-center items-center">
+                <img 
+                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=400&fit=crop&crop=center" 
+                  alt="AI Software Testing Code"
+                  className="w-full max-w-md h-80 object-cover rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                />
+              </div>
             </div>
             
-            <div className="mt-12 p-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border border-primary/20">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Individual Approach</h3>
+            <div className="p-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border border-primary/20">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Your success is our goal</h3>
+              <p className="text-lg text-gray-600 leading-relaxed mb-4">
+                We view every project as an opportunity to demonstrate our expertise and create 
+                long-term partnerships based on trust and results.
+              </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Every project is unique for us. We pay attention to details and provide 
-                solutions tailored to your specific needs. Our experience from various 
-                industries allows us to offer comprehensive and innovative approach to software testing.
+                Our rich experience from various industries allows us to quickly orient ourselves 
+                in your specific environment and offer solutions that actually work. 
+                <span className="font-semibold text-primary"> We invest in the latest technologies</span> 
+                to provide you with competitive advantage in the rapidly changing world of IT.
               </p>
             </div>
           </div>
