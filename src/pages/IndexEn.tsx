@@ -1,5 +1,5 @@
 
-import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Globe, Linkedin } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Globe, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -98,24 +98,8 @@ const IndexEn = () => {
         </div>
       </nav>
 
-      {/* Scrolling Text Animation */}
-      <div className="w-full overflow-hidden bg-gradient-to-r from-primary/5 to-primary/10 py-3 mt-20">
-        <div className="animate-[scroll_20s_linear_infinite] whitespace-nowrap">
-          {scrollingTexts.map((text, index) => (
-            <span key={index} className="inline-block mx-8 text-primary font-semibold text-sm">
-              {text}
-            </span>
-          ))}
-          {scrollingTexts.map((text, index) => (
-            <span key={`repeat-${index}`} className="inline-block mx-8 text-primary font-semibold text-sm">
-              {text}
-            </span>
-          ))}
-        </div>
-      </div>
-
       {/* Hero Section */}
-      <section className="pt-12 pb-16 bg-gradient-to-br from-primary/5 via-primary/10 to-blue-50 relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/5 via-primary/10 to-blue-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent"></div>
         <div className="container mx-auto px-4 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -453,6 +437,12 @@ const IndexEn = () => {
                 >
                   <Linkedin className="h-6 w-6" />
                 </a>
+                <a 
+                  href="mailto:info@tcrew.cz" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <Mail className="h-6 w-6" />
+                </a>
               </div>
             </div>
             
@@ -483,16 +473,6 @@ const IndexEn = () => {
         </div>
       </footer>
 
-      <style>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(100%);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-      `}</style>
     </div>
   );
 };
