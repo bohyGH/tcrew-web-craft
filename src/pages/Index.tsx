@@ -25,6 +25,16 @@ const Index = () => {
       title: "Testovací strategie pro integrační projekty",
       description: "Nastavení testovacích strategií pro střední a velké integrační projekty a jejich řízení v průběhu implementace",
       icon: <Users className="h-8 w-8 text-primary" />
+    },
+    {
+      title: "Test analýza",
+      description: "Profesionální návrh scénářů na základě specifikací businessu a architektury s následnou exekucí",
+      icon: <CheckCircle className="h-8 w-8 text-primary" />
+    },
+    {
+      title: "Performance test",
+      description: "Měření rychlosti, stability, odezvy a propustnosti, aby bylo zajištěno, že splňuje výkonostní požadavky i v reálném provozu",
+      icon: <Shield className="h-8 w-8 text-primary" />
     }
   ];
 
@@ -75,13 +85,12 @@ const Index = () => {
               </a>
             </div>
             <div className="flex items-center space-x-4">
-              <Button variant="outline" size="sm" asChild className="border-primary/30 text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300 shadow-sm hover:shadow-md">
+              <Button variant="outline" size="sm" asChild className="border-primary/30 text-primary hover:bg-primary/10 hover:border-primary transition-all duration-300">
                 <Link to="/en">
-                  <Globe className="mr-2 h-4 w-4" />
                   EN
                 </Link>
               </Button>
-              <Button asChild className="bg-gradient-to-r from-primary via-blue-600 to-teal-500 hover:from-primary/90 hover:via-blue-600/90 hover:to-teal-500/90 text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/40">
+              <Button asChild className="bg-primary hover:bg-primary/90 text-white transition-all duration-300">
                 <a href="#contact">Kontaktujte nás</a>
               </Button>
             </div>
@@ -90,7 +99,7 @@ const Index = () => {
       </nav>
 
       {/* Scrolling Text Animation */}
-      <div className="fixed top-20 left-0 w-full overflow-hidden bg-gradient-to-r from-primary/10 to-transparent z-40 py-2">
+      <div className="w-full overflow-hidden bg-gradient-to-r from-primary/5 to-primary/10 py-3 mt-20">
         <div className="animate-[scroll_20s_linear_infinite] whitespace-nowrap">
           {scrollingTexts.map((text, index) => (
             <span key={index} className="inline-block mx-8 text-primary font-semibold text-sm">
@@ -106,7 +115,7 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/5 via-primary/10 to-blue-50 relative overflow-hidden">
+      <section className="pt-12 pb-16 bg-gradient-to-br from-primary/5 via-primary/10 to-blue-50 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent"></div>
         <div className="container mx-auto px-4 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -153,7 +162,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {services.map((service, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 border-primary/20 hover:border-primary/40 group hover:scale-105">
                 <CardHeader>
@@ -305,7 +314,7 @@ const Index = () => {
             </div>
             
             <div className="p-8 bg-gradient-to-r from-primary/5 to-primary/10 rounded-xl border border-primary/20">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Váš úspěch je náš cíl</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Váš úspěch je náš cíl</h3>
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
                 Každý projekt vnímáme jako příležitost prokázat naši expertizu a vytvořit 
                 dlouhodobé partnerství založené na důvěře a výsledcích.
