@@ -1,10 +1,60 @@
-
+import { useState } from "react";
 import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Globe, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: ""
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await fetch("https://hook.eu1.make.com/owdae4dybd2yikqrkqaptwsqx4sewfny", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          ...formData,
+          timestamp: new Date().toISOString(),
+          source: "tcrew-website"
+        }),
+      });
+
+      toast({
+        title: "Zpráva odeslána",
+        description: "Děkujeme za váš zájem. Brzy se vám ozveme!",
+      });
+
+      setFormData({ name: "", email: "", company: "", message: "" });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Chyba",
+        description: "Nepodařilo se odeslat zprávu. Zkuste to prosím znovu.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const services = [
     {
       title: "Automatizace testování",
@@ -353,7 +403,7 @@ const Index = () => {
               
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Napište nám</h3>
-                <form className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                       Jméno a příjmení *
@@ -362,6 +412,8 @@ const Index = () => {
                       type="text"
                       id="name"
                       name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
                       required
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
@@ -374,6 +426,8 @@ const Index = () => {
                       type="email"
                       id="email"
                       name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       required
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
@@ -386,6 +440,8 @@ const Index = () => {
                       type="text"
                       id="company"
                       name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
                   </div>
@@ -396,14 +452,20 @@ const Index = () => {
                     <textarea
                       id="message"
                       name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       rows={5}
                       required
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       placeholder="Popište prosím váš projekt nebo požadavky..."
                     ></textarea>
                   </div>
-                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white">
-                    Odeslat zprávu
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-primary hover:bg-primary/90 text-white"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? "Odesílám..." : "Odeslat zprávu"}
                   </Button>
                 </form>
               </div>
