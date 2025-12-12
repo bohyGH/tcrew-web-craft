@@ -2,68 +2,41 @@ import { ArrowRight, CheckCircle, Users, Zap, Shield, TrendingUp, Globe, Linkedi
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-
 const Index = () => {
-  const services = [
-    {
-      title: "Automatizace testování",
-      description: "Optimalizace testovacích procesů pomocí moderních automatizačních nástrojů",
-      icon: <Zap className="h-8 w-8 text-primary" />
-    },
-    {
-      title: "Audity testování software",
-      description: "Komplexní hodnocení kvality a efektivity testovacích procesů",
-      icon: <Shield className="h-8 w-8 text-primary" />
-    },
-    {
-      title: "Optimalizace pomocí AI",
-      description: "Využití umělé inteligence pro zlepšení způsobu testování",
-      icon: <TrendingUp className="h-8 w-8 text-primary" />
-    },
-    {
-      title: "Testovací strategie pro integrační projekty",
-      description: "Nastavení testovacích strategií pro střední a velké integrační projekty a jejich řízení v průběhu implementace",
-      icon: <Users className="h-8 w-8 text-primary" />
-    },
-    {
-      title: "Test analýza",
-      description: "Profesionální návrh scénářů na základě specifikací businessu a architektury s následnou exekucí",
-      icon: <CheckCircle className="h-8 w-8 text-primary" />
-    },
-    {
-      title: "Performance test",
-      description: "Měření rychlosti, stability, odezvy a propustnosti, aby bylo zajištěno, že splňuje výkonostní požadavky i v reálném provozu",
-      icon: <Shield className="h-8 w-8 text-primary" />
-    }
-  ];
-
-  const whyTcrew = [
-    "Více než 25 let zkušeností",
-    "Specializace na bankovnictví a telekomunikace",  
-    "Individuální přístup ke každému klientovi",
-    "Inovativní řešení s využitím AI"
-  ];
-
-  const scrollingTexts = [
-    "AI-powered Testing",
-    "Banking Solutions",
-    "Telecom Innovation", 
-    "Quality Assurance",
-    "Test Automation"
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const services = [{
+    title: "Automatizace testování",
+    description: "Optimalizace testovacích procesů pomocí moderních automatizačních nástrojů",
+    icon: <Zap className="h-8 w-8 text-primary" />
+  }, {
+    title: "Audity testování software",
+    description: "Komplexní hodnocení kvality a efektivity testovacích procesů",
+    icon: <Shield className="h-8 w-8 text-primary" />
+  }, {
+    title: "Optimalizace pomocí AI",
+    description: "Využití umělé inteligence pro zlepšení způsobu testování",
+    icon: <TrendingUp className="h-8 w-8 text-primary" />
+  }, {
+    title: "Testovací strategie pro integrační projekty",
+    description: "Nastavení testovacích strategií pro střední a velké integrační projekty a jejich řízení v průběhu implementace",
+    icon: <Users className="h-8 w-8 text-primary" />
+  }, {
+    title: "Test analýza",
+    description: "Profesionální návrh scénářů na základě specifikací businessu a architektury s následnou exekucí",
+    icon: <CheckCircle className="h-8 w-8 text-primary" />
+  }, {
+    title: "Performance test",
+    description: "Měření rychlosti, stability, odezvy a propustnosti, aby bylo zajištěno, že splňuje výkonostní požadavky i v reálném provozu",
+    icon: <Shield className="h-8 w-8 text-primary" />
+  }];
+  const whyTcrew = ["Více než 25 let zkušeností", "Specializace na bankovnictví a telekomunikace", "Individuální přístup ke každému klientovi", "Inovativní řešení s využitím AI"];
+  const scrollingTexts = ["AI-powered Testing", "Banking Solutions", "Telecom Innovation", "Quality Assurance", "Test Automation"];
+  return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-gradient-to-r from-white/95 via-white/98 to-primary/5 backdrop-blur-md z-50 border-b border-primary/20 shadow-lg">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/lovable-uploads/af19479d-d08b-4611-a40e-b2b600f1830c.png" 
-                alt="TCREW Logo" 
-                className="h-16 w-auto"
-              />
+              <img src="/lovable-uploads/af19479d-d08b-4611-a40e-b2b600f1830c.png" alt="TCREW Logo" className="h-16 w-auto" />
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#services" className="text-gray-700 hover:text-primary transition-all duration-300 font-medium relative group">
@@ -125,11 +98,7 @@ const Index = () => {
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=600&fit=crop&crop=center" 
-                alt="Advanced AI Testing Technology"
-                className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border-4 border-primary/20 hover:shadow-3xl transition-all duration-300 hover:scale-105"
-              />
+              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=600&fit=crop&crop=center" alt="Advanced AI Testing Technology" className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl border-4 border-primary/20 hover:shadow-3xl transition-all duration-300 hover:scale-105" />
             </div>
           </div>
         </div>
@@ -146,8 +115,7 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-primary/20 hover:border-primary/40 group hover:scale-105">
+            {services.map((service, index) => <Card key={index} className="hover:shadow-xl transition-all duration-300 border-primary/20 hover:border-primary/40 group hover:scale-105">
                 <CardHeader>
                   <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                   <CardTitle className="text-xl text-gray-900">{service.title}</CardTitle>
@@ -155,8 +123,7 @@ const Index = () => {
                 <CardContent>
                   <CardDescription className="text-base text-gray-600">{service.description}</CardDescription>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-8">
@@ -191,11 +158,7 @@ const Index = () => {
             </div>
             
             <div className="flex justify-center items-center">
-              <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=400&fit=crop&crop=center" 
-                alt="Software Testing Code"
-                className="w-full max-w-md h-80 object-cover rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              />
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=400&fit=crop&crop=center" alt="Software Testing Code" className="w-full max-w-md h-80 object-cover rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105" />
             </div>
           </div>
 
@@ -254,11 +217,7 @@ const Index = () => {
                   auditů a optimalizace pomocí AI.
                 </p>
                 <div className="flex justify-center lg:justify-start mt-8">
-                  <img 
-                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop&crop=center" 
-                    alt="AI Banking Software"
-                    className="w-80 h-60 object-cover rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                  />
+                  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop&crop=center" alt="AI Banking Software" className="w-80 h-60 object-cover rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105" />
                 </div>
               </div>
             </div>
@@ -278,21 +237,15 @@ const Index = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
               <div>
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-                  {whyTcrew.map((item, index) => (
-                    <div key={index} className="flex items-center space-x-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/10 hover:border-primary/30 hover:scale-105">
+                  {whyTcrew.map((item, index) => <div key={index} className="flex items-center space-x-4 p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/10 hover:border-primary/30 hover:scale-105">
                       <CheckCircle className="h-6 w-6 text-primary flex-shrink-0" />
                       <span className="text-lg font-medium text-gray-800">{item}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
               
               <div className="flex justify-center items-center">
-                <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=400&fit=crop&crop=center" 
-                  alt="AI Software Testing Code"
-                  className="w-full max-w-md h-80 object-cover rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                />
+                <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=400&fit=crop&crop=center" alt="AI Software Testing Code" className="w-full max-w-md h-80 object-cover rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105" />
               </div>
             </div>
             
@@ -314,43 +267,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-gradient-to-br from-gray-50 to-primary/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Kontakt</h2>
-              <p className="text-xl text-gray-600">
-                Máte otázky nebo chcete diskutovat o vašem projektu? Kontaktujte nás!
-              </p>
-            </div>
-            
-            <div className="max-w-lg mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Kontaktní údaje</h3>
-              <div className="space-y-4">
-                <div className="text-center">
-                  <h4 className="font-semibold text-gray-900">E-mail</h4>
-                  <a href="mailto:info@tcrew.cz" className="text-primary hover:text-primary/80 transition-colors">info@tcrew.cz</a>
-                </div>
-                <div className="text-center">
-                  <h4 className="font-semibold text-gray-900">Telefon</h4>
-                  <a href="tel:+420777557197" className="text-primary hover:text-primary/80 transition-colors">+420 777 557 197</a>
-                </div>
-                <div className="text-center">
-                  <h4 className="font-semibold text-gray-900">Sídlo</h4>
-                  <p className="text-gray-600">
-                    U zeměpisného ústavu 683/2<br />
-                    Bubeneč, 160 00 Praha 6
-                  </p>
-                </div>
-                <div className="text-center">
-                  <h4 className="font-semibold text-gray-900">IČO</h4>
-                  <p className="text-gray-600">02857537</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
@@ -358,29 +275,17 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <img 
-                  src="/lovable-uploads/af19479d-d08b-4611-a40e-b2b600f1830c.png" 
-                  alt="TCREW Logo" 
-                  className="h-8 w-auto brightness-0 invert"
-                />
+                <img src="/lovable-uploads/af19479d-d08b-4611-a40e-b2b600f1830c.png" alt="TCREW Logo" className="h-8 w-auto brightness-0 invert" />
               </div>
               <p className="text-gray-400 mb-4">
                 Profesionální testování software pro bankovnictví, telekomunikace, 
                 energetiku a strojírenství.
               </p>
               <div className="flex items-center space-x-4">
-                <a 
-                  href="https://www.linkedin.com/company/tcrew/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
+                <a href="https://www.linkedin.com/company/tcrew/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   <Linkedin className="h-6 w-6" />
                 </a>
-                <a 
-                  href="mailto:info@tcrew.cz" 
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
+                <a href="mailto:info@tcrew.cz" className="text-gray-400 hover:text-white transition-colors">
                   <Mail className="h-6 w-6" />
                 </a>
               </div>
@@ -413,8 +318,6 @@ const Index = () => {
         </div>
       </footer>
 
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
